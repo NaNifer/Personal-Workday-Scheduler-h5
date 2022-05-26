@@ -54,21 +54,12 @@ THEN the saved events persist
 ### Links
 
 - Solution URL: [GitHub Repository](https://github.com/NiferK/Personal-Workday-Scheduler-h5)
-- Live Site URL: [Customizable Password Generator](https://niferk.github.io/Personal-Workday-Scheduler-h5/)
+- Live Site URL: [Personal Workday Scheduler](https://niferk.github.io/Personal-Workday-Scheduler-h5/)
 
 
 ## My process
 
-
-This JS task seemed insumountable to me at first. The terminology, syntax, and overall construction of how the various moving parts interconnected with each other was quite confusing for me. This is how I approached the problem:
-
-I first broke the problem down into smaller sections of code, not worrying about what I needed to do next. I focused on first making the dialog boxes work, and subsequently create the output that I would use in the actual generation of the password. This included both ensuring that I was getting the results that I wanted with the happy path, as well as edge cases. 
-
-Once that was nailed down, I refactored it, because although the dialog boxes were working in isolation, they were really, really WET.
-
-Next, I researched of how to create a function that would ranomly make a string using specific input. I further broke this up into to smaller pieces: One function to create a string of characters, depending on the users input, the second function to randomly select a character from that string, until the maximum characters were met.
-
-I got to a point where all these functions were working independently, but now it was time to put it all together. I entertained the idea of putting all of the code under one function, however I felt that keeping these functions separate, and merely calling upon them in other functions, would keep the code easier to test, easier to understand, and easier to maintain and reuse.
+I first broke the problem down into smaller sections of code. CSS was first, I worked with what was prewritten, modifying it, and adding icons with fontawesome.
 
 
 ### Built with
