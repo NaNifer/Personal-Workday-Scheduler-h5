@@ -91,3 +91,18 @@ i {
   color: #000000;
   transition: all 0.3s ease-in-out;
 }
+
+#clearStorage {
+  background-color: #000000;
+  color: white;
+  border-color: grey;
+}
+
+
+#clearStorage:hover {
+  background-color: grey;
+  color: black;
+  border-color: grey;
+  transition: all 0.3s ease-in-out;
+}
+
