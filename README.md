@@ -1,4 +1,4 @@
-# Project Name - Peronal Workday Scheduler
+# Project Name - Personal Workday Scheduler
 
 ## Table of contents
 
@@ -11,8 +11,6 @@
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
@@ -48,18 +46,23 @@ THEN the saved events persist
 
 ### Screenshot
 
-![](./assets/XXXXXX.png)
+![](./images/Screen-shot-1.png)
+![](./images/Screen-shot2.png)
 
 
 ### Links
 
-- Solution URL: [GitHub Repository](https://github.com/NiferK/Personal-Workday-Scheduler-h5)
-- Live Site URL: [Personal Workday Scheduler](https://niferk.github.io/Personal-Workday-Scheduler-h5/)
+- Solution URL: [GitHub Repository](https://github.com/NaNifer/Personal-Workday-Scheduler-h5)
+- Live Site URL: [Personal Workday Scheduler](https://nanifer.github.io/Personal-Workday-Scheduler-h5/)
 
 
 ## My process
 
-I first broke the problem down into smaller sections of code. CSS was first, I worked with what was prewritten, modifying it, and adding icons with fontawesome.
+I first broke the problem down into smaller sections of code. HTML and CSS was first, I worked with what was prewritten, modifying it, and adding icons with fontawesome.
+
+Next I focused on using the JS to modify the formatting. I was at first trying an overly complicated approach to target each of the HTML elements for the formatting. After a session with a tutor, I realized the my approach was more complicated than it needed to be, and there was a simple way to do the formatting without having to get each individual html element. 
+
+That was a little bit of a lightbulb moment, which then I later applied to saving the data in local storage. Finally, when it was all finished and working correctly, I added the extra feature of being able to clear the work scheduler of it's data with a click of a button.
 
 
 ### Built with
@@ -72,31 +75,29 @@ I first broke the problem down into smaller sections of code. CSS was first, I w
 
 ### What I learned
 
-Blocks of code:
+As mentioned above, instead of writing a line of code for each targeted html element, I woeked with my tutor to create a function that would target the button's siblings each time any button was clicked. This was definitely a learning moment for me, and process that I need to remember and internalize as I continue to gain expereience in coding.
+
+Example:
 
 ```js
+$('.saveBtn').on("click", function (event) {
+    console.log(event);
+    var keyName = $(this).siblings('.entryHere').attr('id');
+    var textValue = $(this).siblings('.entryHere').val();
+    localStorage.setItem(keyName, textValue);
+})
 ```
-
-```css
-```
-
-
-### Continued development
-
-
-### Useful resources
-
-These were awesome resources:
-
-
-- [MDN, Math.random](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
 
 ## Author
 
-- GitHub - [NiferK](https://github.com/NiferK)
-- Portfolio - [Nifer Kilakila](https://niferk.github.io/Nifer-Kilakila-Portfolio-h2/)
+- GitHub - [NaNifer](https://github.com/NaNifer)
+- Portfolio - [Nifer Kilakila](https://nanifer.github.io/Nifer-Kilakila-Portfolio-h2/)
 
 
 ## Acknowledgments
 
 A huge shout out to [nullaus](https://github.com/nullaus) who was my quick dial on all the random questions about JS, and taught me that the arguments of functions could call on variables inside of other functions.
+
+Huge thanks to my tutor and TA's, that helped demonstrate more elegant and concise way to target HTML elelments in JS.
+
+Many thanks to my classmates Nolan, Angie, and Ivy for being such great folks for collaborating on solving problems with each other's code. 

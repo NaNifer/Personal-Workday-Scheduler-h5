@@ -3,7 +3,7 @@ let today = moment();
 let now = moment().hour();
 
 // Prints current date/time under header
-$("#currentDay").text(today.format("dddd, MMMM Do YYYY, h:mm"));
+$("#currentDay").text(today.format("dddd, MMMM Do YYYY, h:mm a"));
 
 // Runs scheduleLoad on ready
 $(document).ready(scheduleLoad);
